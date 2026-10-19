@@ -1246,36 +1246,6 @@
       ThumbDown: () => (<svg viewBox="0 0 24 24"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/></svg>),
     };
 
-    const partners = [
-      { id: "off_1", name: "Revenue Universe", desc: "Complete surveys, try offers and earn. Limited to 3 completes a day.", logoClass: "logo-revenue", logoText: "REVENUE UNIVERSE", bg: "#1a2a1a", points: 50, pass_percent: 70, max_tries: 3 },
-      { id: "off_2", name: "WallAds", desc: "Offers and surveys from PointClickTrack - Complete for points! Limited to 5 completes a day.", logoClass: "logo-wallads", logoText: "WALL Ads", bg: "#2a2a1a", points: 40, pass_percent: 60, max_tries: 3 },
-      { id: "off_3", name: "Torox", desc: "A variety of ways to make money, like playing games!", logoClass: "logo-torox", logoText: "TOROX", bg: "#1a1a2a", points: 30, pass_percent: 50, max_tries: 5 },
-      { id: "off_4", name: "lootably", desc: "Complete offers, surveys and watch loot.tv to earn points. Limited to 4 completes a day.", logoClass: "logo-lootably", logoText: "lootably", bg: "#1a2a3a", points: 45, pass_percent: 70, max_tries: 3 },
-      { id: "off_5", name: "ayeT-Studios", desc: "Offers and surveys from our partner, ayeT-Studios.", logoClass: "logo-ayet", logoText: "ayeT STUDIOS", bg: "#2a1a1a", points: 35, pass_percent: 60, max_tries: 3 },
-      { id: "off_6", name: "Monlix", desc: "Do surveys and get Paid To Click (PTC) Limited to 5 completes a day.", logoClass: "logo-monlix", logoText: "Monlix", bg: "#1a2a2a", points: 25, pass_percent: 50, max_tries: 4 },
-      { id: "off_7", name: "Wannads", desc: "Complete surveys for points. Spanish and Latin America surveys available. Limited to 3 completes a day.", logoClass: "logo-wannads", logoText: "WANNADS", bg: "#2a1a1a", points: 50, pass_percent: 70, max_tries: 3 },
-      { id: "off_8", name: "Adwall", desc: "Complete offers and surveys to earn from points AdscendMedia.", logoClass: "logo-adwall", logoText: "AdscendMedia", bg: "#1a1a2a", points: 20, pass_percent: 50, max_tries: 5 }
-    ];
-
-    // Demo quizzes keyed by offer id (correct_index is 0-based)
-    const demoQuizzes = {
-      off_1: [
-        { id: "q1", question: "What is a survey offerwall primarily used for?", options: ["Playing games only", "Completing surveys and offers for rewards", "Streaming music", "Sending emails"], correct: 1 },
-        { id: "q2", question: "How many completes per day does Revenue Universe allow?", options: ["1", "2", "3", "Unlimited"], correct: 2 },
-        { id: "q3", question: "Points are typically awarded when?", options: ["Before starting", "After the offer is completed and verified", "Never", "Only on weekends"], correct: 1 },
-        { id: "q4", question: "Which action can disqualify an offer?", options: ["Finishing all steps", "Using VPN or fake information", "Reading instructions", "Waiting for credit"], correct: 1 }
-      ],
-      off_2: [
-        { id: "q1", question: "WallAds offers come from which network?", options: ["Google", "PointClickTrack", "Facebook", "Amazon"], correct: 1 },
-        { id: "q2", question: "What is the daily complete limit for WallAds?", options: ["3", "5", "10", "Unlimited"], correct: 1 },
-        { id: "q3", question: "Failing a quiz below the pass rate results in?", options: ["Full points", "No change", "Half points as a penalty", "Double points"], correct: 2 }
-      ],
-      off_3: [
-        { id: "q1", question: "Torox is best known for?", options: ["Only surveys", "Games and multiple earn methods", "Only PTC", "Crypto mining"], correct: 1 },
-        { id: "q2", question: "What percent do you need to pass a quiz?", options: ["The offer pass_percent setting", "Always 100%", "Always 0%", "Random"], correct: 0 }
-      ]
-    };
-
     const homeCards = [
       { id: 1, name: "Daily Bonus", desc: "Claim your free daily points reward.", icon: "Star", bg: "#1a2a1a", color: "#2ecc71", pts: "+5 PTS" },
       { id: 2, name: "Refer Friends", desc: "Invite friends and earn commission on their activity.", icon: "Users", bg: "#1a1a2a", color: "#3498db", pts: "10%" },
@@ -1382,38 +1352,6 @@
       { id: 4, name: "Commission Rate", desc: "Percentage you earn from referrals.", icon: "Star", bg: "#1a2a2a", color: "#1abc9c", pts: "10%" },
       { id: 5, name: "Promo Materials", desc: "Banners and text for sharing your link.", icon: "Gift", bg: "#2a1a1a", color: "#e67e22", pts: "Assets" },
       { id: 6, name: "Leaderboard", desc: "Top referrers this month.", icon: "Win", bg: "#1a1a2a", color: "#9b59b6", pts: "Rank #42" },
-    ];
-
-    const pollOptions = ["Many times.", "A few times.", "Once or twice.", "Never."];
-
-    const recentCredits = [
-      { time: "7:02 PM", text: <>Monlix worth <strong>0.08</strong> points approved for <span className="user">blueunicorn2</span></>, flag: "US" },
-      { time: "7:02 PM", text: <>Monlix worth <strong>0.08</strong> points approved for <span className="user">blueunicorn2</span></>, flag: "US" },
-      { time: "7:01 PM", text: <>Paneland worth <strong>48.75</strong> points approved for <span className="user">NguyenAn</span></>, flag: "VN" },
-      { time: "6:58 PM", text: <>Paneland worth <strong>48.75</strong> points approved for <span className="user">hangnguyen</span></>, flag: "VN" },
-      { time: "6:52 PM", text: <>CPX Research worth <strong>39</strong> points approved for <span className="user">danielm622</span></>, flag: "US" }
-    ];
-
-    const newsItems = [
-      { date: "Jan 18, 2026", title: "Site Maintenance" },
-      { date: "Nov 24, 2025", title: "Paypal up" },
-      { date: "Nov 22, 2025", title: "Paypal down" },
-      { date: "May 20, 2025", title: "Bye Bye Crypto" },
-      { date: "Mar 19, 2025", title: "US Rank3+ We Need Your Help" }
-    ];
-
-    const chatMessages = [
-      { id: 1, user: "MoodyBlue", badge: "MOD", avatarClass: "mod", time: "3:47 PM", text: <><span className="mention">@Rosbel2021</span> nice</> },
-      { id: 2, user: "Rosbel2021", badge: "ELITE", avatarClass: "elite", time: "4:04 PM", deleted: true, deletedBy: "IML" },
-      { id: 3, user: "MoodyBlue", badge: "MOD", avatarClass: "mod", time: "4:19 PM", text: <><span className="mention">@Rosbel2021</span> ...</> },
-      { id: 4, user: "Rosbel2021", badge: "ELITE", avatarClass: "elite", time: "4:21 PM", text: <><span className="mention">@MoodyBlue</span> how did i not see that coming :)</> },
-      { id: 5, user: "MoodyBlue", badge: "MOD", avatarClass: "mod", time: "4:45 PM", text: <><span className="mention">@Rosbel2021</span> lol indeed :P</> },
-      { id: 6, user: "MoodyBlue", badge: "MOD", avatarClass: "mod", time: "5:02 PM", text: "ok am off gn" },
-      { id: 7, user: "ahmadelfar91", badge: "ROOKIE", avatarClass: "rookie", time: "5:11 PM", deleted: true, deletedBy: "IML" },
-      { id: 8, user: "MoodyBlue", badge: "MOD", avatarClass: "mod", time: "5:38 PM", text: <><span className="mention">@ahmadelfar91</span> english in chat please</> },
-      { id: 9, user: "devanteb591", badge: null, avatarClass: "unknown", time: "6:39 PM", text: "How fast withdraw" },
-      { id: 10, user: "devanteb591", badge: null, avatarClass: "unknown", time: "6:40 PM", text: <><span className="mention">@MoodyBlue</span> no worries i deleted with cheese</> },
-      { id: 11, user: "devanteb591", badge: null, avatarClass: "unknown", time: "7:09 PM", text: <><span className="mention">@MoodyBlue</span> also removed</> }
     ];
 
     function Icon({ name, size }) {
@@ -1600,33 +1538,73 @@
       );
     }
 
-    function DailyPoll() {
+    function DailyPoll({ user, onUserUpdate }) {
+      const [poll, setPoll] = useState(null);
       const [selected, setSelected] = useState(null);
       const [voted, setVoted] = useState(false);
+      const [msg, setMsg] = useState("");
+      const [loading, setLoading] = useState(true);
+
+      useEffect(() => {
+        api("getPoll").then((r) => {
+          if (r.ok && r.poll) setPoll(r.poll);
+          setLoading(false);
+        }).catch(() => setLoading(false));
+      }, []);
+
+      const vote = async () => {
+        if (selected === null || !poll) return;
+        const r = await api("votePoll", {
+          user_id: user?.id,
+          poll_id: poll.id,
+          option_index: selected
+        });
+        if (r.ok) {
+          setVoted(true);
+          setMsg("+" + (r.reward || 1) + " PT");
+          if (onUserUpdate) onUserUpdate();
+        } else {
+          setMsg(r.error || "Vote failed");
+        }
+      };
+
+      if (loading) return <div style={{ color: "#666", fontSize: 12 }}>Loading...</div>;
+      if (!poll) return <div style={{ color: "#666", fontSize: 12 }}>No active poll.</div>;
+
+      const options = Array.isArray(poll.options) ? poll.options : [];
       return (
         <div>
-          <p className="poll-question">Have you ever used a Walkie-Talkie?</p>
-          {pollOptions.map((opt, i) => (
+          <p className="poll-question">{poll.question}</p>
+          {options.map((opt, i) => (
             <label key={i} className="poll-option">
               <input type="radio" name="daily-poll" checked={selected === i} disabled={voted} onChange={() => setSelected(i)} />
               {opt}
             </label>
           ))}
-          <div className="poll-reward">+1 PT</div>
-          <button className="btn btn-vote" disabled={selected === null || voted} onClick={() => setVoted(true)}>
+          <div className="poll-reward">+{poll.reward || 1} PT</div>
+          <button className="btn btn-vote" disabled={selected === null || voted} onClick={vote}>
             {voted ? "Voted" : "Vote"}
           </button>
-          <div className="past-polls">Past Polls</div>
+          {msg && <div style={{ fontSize: 12, color: "#2ecc71", marginTop: 6 }}>{msg}</div>}
         </div>
       );
     }
 
-    function CurrentGoal() {
-      const current = 0.18, target = 300;
+    function CurrentGoal({ user }) {
+      const [goal, setGoal] = useState(null);
+
+      useEffect(() => {
+        api("getGoal", { user_id: user?.id }).then((r) => {
+          if (r.ok) setGoal(r.goal);
+        }).catch(() => {});
+      }, [user?.id]);
+
+      const current = goal ? Number(goal.current) : (Number(user?.balance) || 0);
+      const target = goal ? Number(goal.target) : 300;
       const pct = Math.min((current / target) * 100, 100);
       return (
         <div>
-          <div className="goal-title">Custom USD Paypal Money</div>
+          <div className="goal-title">{goal?.title || "Custom USD Paypal Money"}</div>
           <div className="paypal-box">
             <div className="paypal-logo">
               <span className="p-blue">P</span><span className="p-light">ay</span>
@@ -1637,7 +1615,9 @@
             <div className="goal-progress-fill" style={{ width: pct + "%" }} />
           </div>
           <div className="goal-stats">{current} / {target} PTS</div>
-          <div className="goal-earned">+41 PTS earned today</div>
+          {goal?.earned_today != null && (
+            <div className="goal-earned">+{goal.earned_today} PTS earned today</div>
+          )}
         </div>
       );
     }
@@ -1682,12 +1662,28 @@
     }
 
     function RecentCredits() {
+      const [credits, setCredits] = useState([]);
+      const [loading, setLoading] = useState(true);
+
+      useEffect(() => {
+        api("getCredits").then((r) => {
+          if (r.ok) setCredits(r.credits || []);
+          setLoading(false);
+        }).catch(() => setLoading(false));
+      }, []);
+
+      if (loading) return <div style={{ color: "#666", fontSize: 12 }}>Loading...</div>;
+      if (!credits.length) return <div style={{ color: "#666", fontSize: 12 }}>No recent credits.</div>;
+
       return (
         <div>
-          {recentCredits.map((c, i) => (
+          {credits.map((c, i) => (
             <div key={i} className="credit-item">
               <span className="credit-time">{c.time}</span>
-              <div className="credit-body">{c.text}</div>
+              <div className="credit-body">
+                {c.partner} worth <strong>{c.points}</strong> points approved for{" "}
+                <span className="user">{c.username}</span>
+              </div>
               <span className="credit-flag">{c.flag}</span>
             </div>
           ))}
@@ -1696,10 +1692,23 @@
     }
 
     function News() {
+      const [items, setItems] = useState([]);
+      const [loading, setLoading] = useState(true);
+
+      useEffect(() => {
+        api("getNews").then((r) => {
+          if (r.ok) setItems(r.news || []);
+          setLoading(false);
+        }).catch(() => setLoading(false));
+      }, []);
+
+      if (loading) return <div style={{ color: "#666", fontSize: 12 }}>Loading...</div>;
+      if (!items.length) return <div style={{ color: "#666", fontSize: 12 }}>No news.</div>;
+
       return (
         <div>
-          {newsItems.map((n, i) => (
-            <div key={i} className="news-item">
+          {items.map((n, i) => (
+            <div key={n.id || i} className="news-item">
               <div className="news-date">{n.date}</div>
               <div className="news-title">{n.title}</div>
             </div>
@@ -1708,15 +1717,15 @@
       );
     }
 
-    function LeftSidebar({ cashouts, onClaimBonus, mobileOpen }) {
+    function LeftSidebar({ cashouts, onClaimBonus, mobileOpen, user, onUserUpdate }) {
       const [open, setOpen] = useState({
         poll: false, goal: false, cashout: false, credits: false, news: false
       });
       const toggle = (key) => setOpen((o) => ({ ...o, [key]: !o[key] }));
       const sections = [
-        { key: "poll", label: "Daily Poll", body: <DailyPoll /> },
-        { key: "goal", label: "Current Goal", body: <CurrentGoal /> },
-        { key: "cashout", label: "Cashout 6", body: <Cashout6 cashouts={cashouts} onClaim={onClaimBonus} /> },
+        { key: "poll", label: "Daily Poll", body: <DailyPoll user={user} onUserUpdate={onUserUpdate} /> },
+        { key: "goal", label: "Current Goal", body: <CurrentGoal user={user} /> },
+        { key: "cashout", label: "Cashout 6", body: <Cashout6 cashouts={cashouts} onClaim={onClaimBonus} user={user} /> },
         { key: "credits", label: "Recent Credits", body: <RecentCredits /> },
         { key: "news", label: "News", body: <News /> }
       ];
@@ -1763,11 +1772,34 @@
       );
     }
 
-    function ChatPanel({ open, onClose }) {
+    function ChatPanel({ open, onClose, user }) {
       const [tab, setTab] = useState("chat");
       const [input, setInput] = useState("");
-      const [messages, setMessages] = useState(chatMessages);
+      const [messages, setMessages] = useState([]);
       const bottomRef = useRef(null);
+
+      const loadChat = () => {
+        api("getChat", { limit: 50 }).then((r) => {
+          if (r.ok) {
+            setMessages((r.messages || []).map((m) => ({
+              id: m.id,
+              user: m.username,
+              badge: m.badge || null,
+              avatarClass: (m.badge || "").toLowerCase() === "mod" ? "mod" :
+                (m.badge || "").toLowerCase() === "elite" ? "elite" :
+                (m.badge || "").toLowerCase() === "rookie" ? "rookie" : "unknown",
+              time: m.time,
+              text: m.message,
+              deleted: m.deleted,
+              deletedBy: m.deleted_by
+            })));
+          }
+        }).catch(() => {});
+      };
+
+      useEffect(() => {
+        if (open) loadChat();
+      }, [open]);
 
       useEffect(() => {
         if (open && bottomRef.current) {
@@ -1775,14 +1807,14 @@
         }
       }, [open, messages]);
 
-      const sendMessage = (e) => {
+      const sendMessage = async (e) => {
         if (e.key === "Enter" && input.trim()) {
-          const now = new Date();
-          const time = now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-          setMessages((m) => [...m, {
-            id: Date.now(), user: "IML", badge: "MOD", avatarClass: "mod", time, text: input.trim()
-          }]);
+          const text = input.trim();
           setInput("");
+          try {
+            const r = await api("sendChat", { user_id: user?.id, message: text });
+            if (r.ok) loadChat();
+          } catch (err) {}
         }
       };
 
@@ -2224,35 +2256,70 @@
       );
     }
 
-    function QuizModal({ offer, onClose, onComplete }) {
-      const questions = demoQuizzes[offer.id] || demoQuizzes.off_1;
+    function QuizModal({ offer, user, onClose, onComplete }) {
+      const [questions, setQuestions] = useState([]);
+      const [offerInfo, setOfferInfo] = useState(offer);
       const [answers, setAnswers] = useState({});
       const [result, setResult] = useState(null);
-      const [triesLeft, setTriesLeft] = useState(offer.max_tries);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState("");
+      const [busy, setBusy] = useState(false);
 
-      const allAnswered = questions.every((q) => answers[q.id] !== undefined);
-
-      const submit = () => {
-        if (!allAnswered) return;
-        let correct = 0;
-        questions.forEach((q) => {
-          if (Number(answers[q.id]) === Number(q.correct)) correct++;
+      useEffect(() => {
+        let cancelled = false;
+        setLoading(true);
+        setError("");
+        api("getQuiz", { offer_id: offer.id, user_id: user?.id }).then((r) => {
+          if (cancelled) return;
+          if (!r.ok) {
+            setError(r.error || "Could not load quiz.");
+            setLoading(false);
+            return;
+          }
+          setQuestions(r.questions || []);
+          setOfferInfo({ ...offer, ...r.offer });
+          setLoading(false);
+        }).catch(() => {
+          if (!cancelled) {
+            setError("Connection error loading quiz.");
+            setLoading(false);
+          }
         });
-        const score = Math.round((correct / questions.length) * 100);
-        const passed = score >= offer.pass_percent;
-        const pointsAwarded = passed
-          ? offer.points
-          : -Math.round((offer.points / 2) * 100) / 100;
+        return () => { cancelled = true; };
+      }, [offer.id, user?.id]);
 
-        setTriesLeft((t) => Math.max(0, t - 1));
-        setResult({
-          passed,
-          score,
-          correct,
-          total: questions.length,
-          pointsAwarded
-        });
-        if (onComplete) onComplete(pointsAwarded, passed);
+      const allAnswered = questions.length > 0 && questions.every((q) => answers[q.id] !== undefined);
+      const passPercent = offerInfo.pass_percent || offer.pass_percent || 70;
+      const points = offerInfo.points || offer.points || 0;
+      const triesLeft = offerInfo.tries_left != null ? offerInfo.tries_left : (offer.max_tries || 3);
+
+      const submit = async () => {
+        if (!allAnswered || busy) return;
+        setBusy(true);
+        try {
+          const r = await api("submitQuiz", {
+            offer_id: offer.id,
+            user_id: user?.id,
+            answers
+          });
+          if (!r.ok) {
+            setError(r.error || "Submit failed.");
+            setBusy(false);
+            return;
+          }
+          setResult({
+            passed: r.passed,
+            score: r.score_percent,
+            correct: r.correct,
+            total: r.total,
+            pointsAwarded: r.points_awarded,
+            message: r.message
+          });
+          if (onComplete) onComplete(r.points_awarded, r.passed);
+        } catch (e) {
+          setError("Connection error.");
+        }
+        setBusy(false);
       };
 
       return (
@@ -2263,21 +2330,24 @@
             </button>
 
             <div className="quiz-header">
-              <div className="quiz-offer-name">{offer.name}</div>
+              <div className="quiz-offer-name">{offerInfo.name || offer.name}</div>
               <div className="quiz-meta">
-                <span>Worth <strong>{offer.points} PTS</strong></span>
-                <span>Pass rate <strong>{offer.pass_percent}%</strong></span>
+                <span>Worth <strong>{points} PTS</strong></span>
+                <span>Pass rate <strong>{passPercent}%</strong></span>
                 <span>Tries left <strong>{triesLeft}</strong></span>
-                <span className="warn">Fail = −{Math.round(offer.points / 2)} PTS</span>
+                <span className="warn">Fail = −{Math.round(points / 2)} PTS</span>
               </div>
             </div>
 
-            {!result ? (
+            {loading && <div className="auth-loading">Loading quiz...</div>}
+            {error && !result && <div className="auth-error">{error}</div>}
+
+            {!loading && !result && questions.length > 0 && (
               <>
                 {questions.map((q, qi) => (
                   <div key={q.id} className="quiz-question">
                     <div className="quiz-q-text">{qi + 1}. {q.question}</div>
-                    {q.options.map((opt, oi) => (
+                    {(q.options || []).map((opt, oi) => (
                       <label
                         key={oi}
                         className={`quiz-option ${answers[q.id] === oi ? "selected" : ""}`}
@@ -2296,19 +2366,21 @@
                 <button
                   className="btn-save"
                   style={{ width: "100%", marginTop: 8 }}
-                  disabled={!allAnswered}
+                  disabled={!allAnswered || busy}
                   onClick={submit}
                 >
-                  Submit Quiz
+                  {busy ? "Submitting..." : "Submit Quiz"}
                 </button>
               </>
-            ) : (
+            )}
+
+            {result && (
               <div className="quiz-result">
                 <div className={`score ${result.passed ? "pass" : "fail"}`}>
                   {result.score}%
                 </div>
                 <div className="detail">
-                  {result.correct}/{result.total} correct — need {offer.pass_percent}% to pass
+                  {result.correct}/{result.total} correct — need {passPercent}% to pass
                 </div>
                 <div className={`pts-change ${result.passed ? "pos" : "neg"}`}>
                   {result.passed
@@ -2316,9 +2388,9 @@
                     : result.pointsAwarded + " PTS penalty"}
                 </div>
                 <div className="detail" style={{ marginBottom: 16 }}>
-                  {result.passed
+                  {result.message || (result.passed
                     ? "Great job! Points have been added to your balance."
-                    : "You did not meet the pass requirement. Half the offer value was deducted."}
+                    : "You did not meet the pass requirement. Half the offer value was deducted.")}
                 </div>
                 <button className="modal-submit" onClick={onClose}>Close</button>
               </div>
@@ -2328,8 +2400,36 @@
       );
     }
 
-    function EarnPage() {
+    const PARTNER_STYLES = {
+      "Revenue Universe": { logoClass: "logo-revenue", logoText: "REVENUE UNIVERSE", bg: "#1a2a1a" },
+      "WallAds": { logoClass: "logo-wallads", logoText: "WALL Ads", bg: "#2a2a1a" },
+      "Torox": { logoClass: "logo-torox", logoText: "TOROX", bg: "#1a1a2a" },
+      "lootably": { logoClass: "logo-lootably", logoText: "lootably", bg: "#1a2a3a" },
+      "ayeT-Studios": { logoClass: "logo-ayet", logoText: "ayeT STUDIOS", bg: "#2a1a1a" },
+      "Monlix": { logoClass: "logo-monlix", logoText: "Monlix", bg: "#1a2a2a" },
+      "Wannads": { logoClass: "logo-wannads", logoText: "WANNADS", bg: "#2a1a1a" },
+      "Adwall": { logoClass: "logo-adwall", logoText: "AdscendMedia", bg: "#1a1a2a" }
+    };
+
+    function EarnPage({ user, onUserUpdate }) {
+      const [list, setList] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState("");
       const [activeOffer, setActiveOffer] = useState(null);
+
+      const load = () => {
+        setLoading(true);
+        api("getPartners", { user_id: user?.id }).then((r) => {
+          if (r.ok) setList(r.partners || []);
+          else setError(r.error || "Failed to load offers.");
+          setLoading(false);
+        }).catch(() => {
+          setError("Connection error.");
+          setLoading(false);
+        });
+      };
+
+      useEffect(() => { load(); }, [user?.id]);
 
       return (
         <section>
@@ -2337,27 +2437,41 @@
           <p className="section-sub">
             Click an offer to take its quiz. Pass to earn full points — fail and you lose half as a penalty.
           </p>
+          {loading && <div className="auth-loading">Loading offers...</div>}
+          {error && <div className="auth-error">{error}</div>}
+          {!loading && !error && list.length === 0 && (
+            <p style={{ color: "#888" }}>No offers available. Run setup() in Apps Script to seed data.</p>
+          )}
           <div className="cards-grid">
-            {partners.map((c) => (
-              <div key={c.id} className="card" onClick={() => setActiveOffer(c)}>
-                <div className="card-top" style={{ background: c.bg || "#1a1a1a" }}>
-                  <div className={`placeholder ${c.logoClass}`}>{c.logoText}</div>
-                </div>
-                <div className="card-info">
-                  <div className="card-name">{c.name}</div>
-                  <div className="card-desc">{c.desc}</div>
-                  <div className="card-pts-row">
-                    <span className="pts-val">{c.points} PTS</span>
-                    <span className="pass-info">Pass {c.pass_percent}% · {c.max_tries} tries</span>
+            {list.map((c) => {
+              const style = PARTNER_STYLES[c.name] || PARTNER_STYLES[c.partner] || {
+                logoClass: "", logoText: (c.name || "?").toUpperCase(), bg: "#1a1a1a"
+              };
+              return (
+                <div key={c.id} className="card" onClick={() => setActiveOffer(c)}>
+                  <div className="card-top" style={{ background: style.bg }}>
+                    <div className={`placeholder ${style.logoClass}`}>{style.logoText}</div>
+                  </div>
+                  <div className="card-info">
+                    <div className="card-name">{c.name}</div>
+                    <div className="card-desc">{c.description}</div>
+                    <div className="card-pts-row">
+                      <span className="pts-val">{c.points} PTS</span>
+                      <span className="pass-info">
+                        Pass {c.pass_percent}% · {c.tries_left != null ? c.tries_left : c.max_tries} tries left
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           {activeOffer && (
             <QuizModal
               offer={activeOffer}
-              onClose={() => setActiveOffer(null)}
+              user={user}
+              onClose={() => { setActiveOffer(null); load(); }}
+              onComplete={() => { if (onUserUpdate) onUserUpdate(); }}
             />
           )}
         </section>
@@ -2610,7 +2724,7 @@
             onLogout={handleLogout}
           />
           <div className="main-layout">
-            <LeftSidebar cashouts={cashouts} onClaimBonus={handleClaim} mobileOpen={leftOpen} user={user} />
+            <LeftSidebar cashouts={cashouts} onClaimBonus={handleClaim} mobileOpen={leftOpen} user={user} onUserUpdate={refreshUser} />
             <main className="content">
               <PageContent page={activeNav} user={user} onUserUpdate={refreshUser} setUser={setUser} />
             </main>
